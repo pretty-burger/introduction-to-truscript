@@ -118,18 +118,37 @@ The multi script is a script that will run on both the client AND the server, wh
 On the bottom of your screen you will see an "Asset Browser"
 On the left side you should see a folder named "Assets" that is the root folder, it can not be deleted or changed and that's where we are going to keep all of your scripts inside
 
+<img width="2559" height="1383" alt="asset_browser" src="https://github.com/user-attachments/assets/5eca7948-b02b-4212-b638-e792f4397629" />
+
 Start by right clicking on the empty space and hovering over "New" -> "Script" click it and then you should see a small popup asking you to give your script a name and then clicking "Create"
+
+<img width="336" height="215" alt="create_script" src="https://github.com/user-attachments/assets/3d807d28-d2ae-40ba-a76a-aecaca858ce1" />
+
 Find your newly created script in the asset browser and make sure it's open by double clicking on it
 
+<img width="360" height="228" alt="found_script" src="https://github.com/user-attachments/assets/226280a8-53b1-46d0-b643-796828bd2037" />
+
 You can change the script type from here by right clicking on the script and changing the type to whatever you need, you can also rename your script or delete it from here
+
+<img width="477" height="196" alt="changing_type" src="https://github.com/user-attachments/assets/08ec5967-2c7a-48bb-9578-89f4a9caf33a" />
 
 # Example Usage (Attaching & Using our script)
 On the left top, locate the "New Part" button to create a new part. The name doesn't matter, if you wish to rename it you can. Find the part in the Explorer and then make your way down to the Properties Widget
 
+<img width="523" height="337" alt="create_part" src="https://github.com/user-attachments/assets/e50e29d1-1bea-4dd7-85a9-e905b7f18c95" />
+
 Once you can see the Part's properties, scroll down until you see "Add Script Component" -> "Existing Script"
 
+<img width="377" height="547" alt="attach_script" src="https://github.com/user-attachments/assets/587b159c-3b89-4bc6-b22f-0d530f769d87" />
+
+<img width="200" height="111" alt="existing_script" src="https://github.com/user-attachments/assets/8e70d57a-6ee9-453e-857e-d0acebd0c849" />
+
 Now select your script and click the "Attach" button
+<img width="342" height="453" alt="attaching_script" src="https://github.com/user-attachments/assets/e5671f71-7fe6-40a4-a2e7-09dd36ee5480" />
+
 Open your script, you can also open the script that's attached to your part by clicking the little script icon next to the name in the Explorer
+
+<img width="360" height="228" alt="found_script" src="https://github.com/user-attachments/assets/491b707b-c146-4c07-abd1-58023fc1611e" />
 
 Your script should look something like this:
 ```py
@@ -140,8 +159,15 @@ print("Hello, TruWorlds!")
 
 Click the little play button on the top right and check if you can see the "Hello, TruWorlds!" message print out in your console
 
+<img width="322" height="146" alt="play_test" src="https://github.com/user-attachments/assets/39aa642f-ecc8-49cb-962b-c7c7e1ee1716" />
+
 If you can see the message then that means your script works!
 If you can't see your message, make sure that the console filter is set to "All" and not "Editor" or anything else. (If it still won't show up try reattaching your script)
+
+<img width="147" height="210" alt="console_filter" src="https://github.com/user-attachments/assets/ed9deb0c-48d7-4d69-aaa4-9b59ac5db57d" />
+
+<img width="416" height="128" alt="console_result" src="https://github.com/user-attachments/assets/fcf98717-9cdc-4539-b4b1-dd447da8e28d" />
+
 
 Alright now let's understand the confusing "extends Instance" part, this simply says that your script is attached to an Instance which is your part and allows you to use the keyword "this" to identify it
 
@@ -157,6 +183,9 @@ this.Speak("Hello, TruWorlds!", 5)
 ```
 
 In the game your part should have a small chat bubble that will despawn in around 5 seconds after first play testing the game
+
+<img width="214" height="159" alt="proof_of_working" src="https://github.com/user-attachments/assets/81e55259-c180-4181-bb0a-baedbb9dcfee" />
+
 
 # Kill Part Example
 To understand how to kill a player i recommend reading https://create.truworlds.com/docs/classes/CharacterController
@@ -181,3 +210,5 @@ this.Touched.Connect(onTouched)
 ```
 
 Click play and check if everything works fine, when you touch the part your character should end up dying
+
+<img width="609" height="438" alt="death" src="https://github.com/user-attachments/assets/380c5789-0b32-45f3-854a-068dc834795f" />
