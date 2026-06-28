@@ -100,13 +100,13 @@ local someTable = {}
 ```
 
 List of functions:
-table.count(table) -> Retuns how many values are saved in our table (number)
-table.has(table, index) -> Checks if there is anything saved under said index, returns true | false (boolean)
-table.contains(table, value) -> Checks if our table has said value saved anywhere, also returns true | false (boolean)
-table.keys(table) -> Returns a list of all available keys in the table (array)
-table.values(table) -> Returns a list of all available values in the table (array)
-table.remove(table, index) -> Removes the value saved under said index from the table
-table.clear(table) -> Sets all of the values to nil, clearing the table to be empty
+- table.count(table) -> Retuns how many values are saved in our table (number)
+- table.has(table, index) -> Checks if there is anything saved under said index, returns true | false (boolean)
+- table.contains(table, value) -> Checks if our table has said value saved anywhere, also returns true | false (boolean)
+- table.keys(table) -> Returns a list of all available keys in the table (array)
+- table.values(table) -> Returns a list of all available values in the table (array)
+- table.remove(table, index) -> Removes the value saved under said index from the table
+- table.clear(table) -> Sets all of the values to nil, clearing the table to be empty
 
 Their usage is pretty simple so im not going to explain each but they would be used sum like this:
 ```py
