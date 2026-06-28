@@ -91,6 +91,138 @@ spawn(func():
 SomeSignal.Connect(func():
   print("Signal has been fired!")
 )
+
+```
+# Tables
+Syntax for tables:
+```py
+local someTable = {}
+```
+
+List of functions:
+table.count(table) -> Retuns how many values are saved in our table (number)
+table.has(table, index) -> Checks if there is anything saved under said index, returns true | false (boolean)
+table.contains(table, value) -> Checks if our table has said value saved anywhere, also returns true | false (boolean)
+table.keys(table) -> Returns a list of all available keys in the table (array)
+table.values(table) -> Returns a list of all available values in the table (array)
+table.remove(table, index) -> Removes the value saved under said index from the table
+table.clear(table) -> Sets all of the values to nil, clearing the table to be empty
+
+Their usage is pretty simple so im not going to explain each but they would be used sum like this:
+```py
+local someTable = {
+	["Tru"] = "Worlds"
+}
+
+print(table.contains(someTable, "Worlds")) -> true
+print(table.values(someTable)) -> ["Worlds"]
+print(table.keys(someTable)) -> ["Tru"]
+```
+
+# Arrays
+Example of an array:
+```py
+local someArray = []
+```
+
+Reading the value saved at x
+```py
+local someArray = ["Brixster", "Kyle", "Logan", "Star"]
+
+print(someArray[0]) -> "Brixster"
+```
+
+You can also use this method to replace the value saved under said index of x
+```py
+local someArray = ["Brixster", "Kyle", "Logan", "Star"]
+
+someArray[3] = "Nicholas" -> ["Brixster", "Kyle", "Logan", "Nicholas"]
+```
+
+Checking the length of an array
+```py
+local someArray = [1,2,3]
+
+print(someArray.length) -> 3
+```
+
+Adding a value to the end of an array
+```py
+local someArray = [1,2,3]
+
+someArray.push(4) -> 1,2,3,4
+```
+
+Adding a value to any index in an array
+```py
+local someArray = ["Meat", "Eggs", "Apples"]
+
+someArray.insert(1, "Milk") -> "Meat", "Milk", "Eggs", "Apples"
+```
+
+Removing the last saved value on the end of an array
+```py
+local someArray = [1,2,3]
+
+someArray.pop() -> 1,2
+```
+
+Removing a specific value in an array
+```py
+local someArray = [1,2,3]
+
+someArray.remove(2) -> 1,3
+```
+
+# Loops (While & For)
+
+While loops allow you to keep repeating the same block of code forever until the conditions have been met, the syntax for a while loop will look something like this:
+```py
+# The condition here is the "true" part, to avoid crashing we need to add a wait() inside of the loop
+while true:
+	print("Hello, TruWorlds!")
+	wait()
+```
+
+The condition can be anything you might need, for an example if you want your loop to run while your player is still alive you could do something like this:
+```py
+local player = game.Players.LocalPlayer
+
+while player.Character.Health > 0:
+	print("We are alive!")
+	wait()
+```
+Remember that loops actually yield which means that the rest of the script is going to wait for them to finish running
+You can actually break any of the loops using the keyworld "break" even if the conditions for it were not met yet
+```py
+# In this example, we are going to be using this "i" variable, increasing it by +1 each time and once it goes above 5+ our loop is going to break (stop running further)
+local i = 0
+
+# The condition can also be just wait(), this means that the loop is going to run forever until we break it while also waiting a bit before running the block again
+while wait():
+	i+=1
+	if i > 5:
+		break
+```
+Okay now let's go to For Loops
+For loops will run x times, they are very simple and have 2 required and one optional parameter
+
+```py
+# The "x" in this case can be named anything you wish, it's going to be our number telling us how many times the loop has ran already
+for x in range(start, end, increment):
+	# Your code goes here
+```
+
+So now that you understood how they work, let me show you an example
+Let's say you wanna have a round timer that goes from 20 to 0 with the increment being -1 because the timer is supposed to be decreasing the time now adding onto it
+
+```py
+local timeLeft = 20
+
+# The first param is the current time left, the second one is -1 because we want it to end at 0 (Think of it this way, if you want your timer to end at 1 you will always put one number less as the end so that means 0), and finally we want the timer going down so the incrmenet is -1
+for x in range(timeLeft, -1, -1):
+	print(x)
+	# In the console you will get 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10... all the way to 0 and including it
 ```
 
 # Signals
